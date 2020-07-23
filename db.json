@@ -1,132 +1,95 @@
-{
-  "recipes": [
-    {
-      "id": "0001",
-      "type": "donut",
-      "name": "Cake",
-      "ppu": 0.55,
-      "batters": {
-        "batter": [
-          {
-            "id": "1001",
-            "type": "Regular"
-          },
-          {
-            "id": "1002",
-            "type": "Chocolate"
-          },
-          {
-            "id": "1003",
-            "type": "Blueberry"
-          },
-          {
-            "id": "1004",
-            "type": "Devil's Food"
-          }
-        ]
-      },
-      "topping": [
-        {
-          "id": "5001",
-          "type": "None"
-        },
-        {
-          "id": "5002",
-          "type": "Glazed"
-        },
-        {
-          "id": "5005",
-          "type": "Sugar"
-        },
-        {
-          "id": "5007",
-          "type": "Powdered Sugar"
-        },
-        {
-          "id": "5006",
-          "type": "Chocolate with Sprinkles"
-        },
-        {
-          "id": "5003",
-          "type": "Chocolate"
-        },
-        {
-          "id": "5004",
-          "type": "Maple"
-        }
-      ]
-    },
-    {
-      "id": "0002",
-      "type": "donut",
-      "name": "Raised",
-      "ppu": 0.55,
-      "batters": {
-        "batter": [
-          {
-            "id": "1001",
-            "type": "Regular"
-          }
-        ]
-      },
-      "topping": [
-        {
-          "id": "5001",
-          "type": "None"
-        },
-        {
-          "id": "5002",
-          "type": "Glazed"
-        },
-        {
-          "id": "5005",
-          "type": "Sugar"
-        },
-        {
-          "id": "5003",
-          "type": "Chocolate"
-        },
-        {
-          "id": "5004",
-          "type": "Maple"
-        }
-      ]
-    },
-    {
-      "id": "0003",
-      "type": "donut",
-      "name": "Old Fashioned",
-      "ppu": 0.55,
-      "batters": {
-        "batter": [
-          {
-            "id": "1001",
-            "type": "Regular"
-          },
-          {
-            "id": "1002",
-            "type": "Chocolate"
-          }
-        ]
-      },
-      "topping": [
-        {
-          "id": "5001",
-          "type": "None"
-        },
-        {
-          "id": "5002",
-          "type": "Glazed"
-        },
-        {
-          "id": "5003",
-          "type": "Chocolate"
-        },
-        {
-          "id": "5004",
-          "type": "Maple"
-        }
-      ]
-    }
-  ]
-}
+"name" : "preprodwizard",
+    "cSVServers" : [ {
+        "name" : "preprodwizard_80_csvs",
+        "status" : "UP",
+        "ipAddress" : "162.115.34.53",
+        "port" : "80",
+        "protocol" : "HTTP",
+        "lBVServers" : [ {
+            "name" : "preprodwizard_static_lbvs",
+            "status" : "UP",
+            "ipAddress" : "0.0.0.0",
+            "port" : "0",
+            "protocol" : "HTTP",
+            "serviceGroups" : [ {
+                "name" : "preprodwizard_static_30443_sg",
+                "status" : "--",
+                "ipAddress" : "--",
+                "port" : "--",
+                "protocol" : "--",
+                "servers" : [ {
+                    "name" : "--",
+                    "status" : "UP",
+                    "ipAddress" : "10.255.48.28",
+                    "port" : "30443",
+                    "protocol" : "--"
+                }, {
+                    "name" : "--",
+                    "status" : "UP",
+                    "ipAddress" : "10.255.48.37",
+                    "port" : "30443",
+                    "protocol" : "--"
+                } ]
+            } ]
+        } ]
+    }, {
+        "name" : "preprodwizard_443_csvs",
+        "status" : "UP",
+        "ipAddress" : "162.115.34.53",
+        "port" : "443",
+        "protocol" : "SSL",
+        "lBVServers" : [ {
+            "name" : "preprodwizard_static_lbvs",
+            "status" : "UP",
+            "ipAddress" : "0.0.0.0",
+            "port" : "0",
+            "protocol" : "HTTP",
+            "serviceGroups" : [ {
+                "name" : "preprodwizard_static_30443_sg",
+                "status" : "--",
+                "ipAddress" : "--",
+                "port" : "--",
+                "protocol" : "--",
+                "servers" : [ {
+                    "name" : "--",
+                    "status" : "UP",
+                    "ipAddress" : "10.255.48.28",
+                    "port" : "30443",
+                    "protocol" : "--"
+                }, {
+                    "name" : "--",
+                    "status" : "UP",
+                    "ipAddress" : "10.255.48.37",
+                    "port" : "30443",
+                    "protocol" : "--"
+                } ]
+            } ]
+        }, {
+            "name" : "preprodwizard_web_lbvs",
+            "status" : "UP",
+            "ipAddress" : "0.0.0.0",
+            "port" : "0",
+            "protocol" : "HTTP",
+            "serviceGroups" : [ {
+                "name" : "preprodwizard_web_28443_sg",
+                "status" : "--",
+                "ipAddress" : "--",
+                "port" : "--",
+                "protocol" : "--",
+                "servers" : [ {
+                    "name" : "--",
+                    "status" : "UP",
+                    "ipAddress" : "10.255.48.28",
+                    "port" : "28443",
+                    "protocol" : "--"
+                }, {
+                    "name" : "--",
+                    "status" : "UP",
+                    "ipAddress" : "10.255.48.37",
+                    "port" : "28443",
+                    "protocol" : "--"
+                } ]
+            } ]
+        } ]
+    } ]
+};
