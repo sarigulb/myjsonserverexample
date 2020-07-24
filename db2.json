@@ -1,5 +1,4 @@
-[
-		{
+{
 			"id": "animal",
 			"parent": "#",
 			"text": "Animals",
@@ -86,4 +85,3 @@
 			"parent": "lappy",
 			"text": "HP"
 		}
-	]
